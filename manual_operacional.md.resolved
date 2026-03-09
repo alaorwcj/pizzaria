@@ -1,0 +1,54 @@
+# 📖 Manual Operacional: Daniel's Forneria
+
+Este guia apresenta o fluxo completo da plataforma, desde a jornada do cliente até a finalização da entrega pela logística.
+
+---
+
+## 🛍️ 1. Jornada do Cliente (Pedido)
+O cliente acessa o cardápio, personaliza seus produtos (incluindo pizzas meio-a-meio) e finaliza o checkout.
+
+1. **Login**: Acesse com as credenciais de cliente.
+2. **Seleção**: Escolha os produtos e adicione ao carrinho.
+3. **Checkout**: Valide o endereço de entrega e confirme o pedido.
+4. **Sucesso**: O pedido ganha um número único e entra na fila da cozinha.
+
+![Sucesso no Checkout](/home/rsa-key-20260306/.gemini/antigravity/brain/e0b816ad-265b-45ca-8035-8dfad808e4f7/checkout_success_order_12_1773017090855.png)
+
+---
+
+## 👨‍🍳 2. Jornada da Pizzaria (Cozinha/KDS)
+A equipe da cozinha gerencia os pedidos em tempo real através do Kitchen Display System (KDS).
+
+1. **Recepção**: O pedido aparece como "RECEBIDO".
+2. **Preparação**: Clique em "ACEITAR" para mover para "NA COZINHA".
+3. **Despacho**: Atribua um entregador disponível e clique em "PRONTO / DESPACHAR".
+
+![Monitor da Cozinha](/home/rsa-key-20260306/.gemini/antigravity/brain/e0b816ad-265b-45ca-8035-8dfad808e4f7/kds_monitor_order_12_1773017282361.png)
+
+---
+
+## 🛵 3. Jornada do Entregador (Logística)
+O entregador gerencia suas coletas e confirma as entregas via Hub de Logística.
+
+1. **Ficar Online**: O entregador ativa seu status para receber ordens.
+2. **Em Rota**: O pedido aparece no dashboard como "EM ROTA".
+3. **Finalização**: Ao chegar no destino, clique em **"CONFIRMAR ENTREGA"**.
+
+![Confirmação de Entrega](/home/rsa-key-20260306/.gemini/antigravity/brain/e0b816ad-265b-45ca-8035-8dfad808e4f7/courier_delivery_order_13_1773019064033.png)
+
+---
+
+## ✅ 4. Verificação Final (Cliente)
+O cliente acompanha a atualização em tempo real até o status final.
+
+1. **Acompanhamento**: O histórico reflete o status **"CONCLUÍDO"**.
+
+![Status Final do Cliente](/home/rsa-key-20260306/.gemini/antigravity/brain/e0b816ad-265b-45ca-8035-8dfad808e4f7/customer_final_status_order_13_1773019239781.png)
+
+---
+
+> [!TIP]
+> **Credenciais de Teste**:
+> - **Cliente**: `test_final@example.com` / [password](file:///home/rsa-key-20260306/pizzaria/backend/app/core/security.py#22-24)
+> - **Cozinha (Admin)**: `admin@daniels.com` / `admin123`
+> - **Entregador**: `courier@example.com` / [password](file:///home/rsa-key-20260306/pizzaria/backend/app/core/security.py#22-24)
