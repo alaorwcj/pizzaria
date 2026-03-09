@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-navy-deep text-silver-muted font-sans antialiased;
+  }
+}
+
+@layer components {
+  .sidebar-item {
+    @apply flex justify-between items-center py-2 px-3 border-b border-white/5 last:border-0;
+  }
+
+  .data-card {
+    @apply bg-navy-dark border border-border-navy hover:border-teal-accent/40 transition-all duration-200 p-4;
+  }
+
+  .executive-input {
+    @apply bg-navy-deep border-border-navy text-silver-crisp text-sm focus:ring-teal-accent focus:border-teal-accent placeholder:text-slate-600 transition-all py-2;
+  }
+
+  .section-header {
+    @apply flex items-center gap-3 border-b border-border-navy pb-3 mb-6;
+  }
+
+  .section-title {
+    @apply text-xs font-bold tracking-widest uppercase text-silver-crisp;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-navy-deep;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-graphite rounded-full;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
